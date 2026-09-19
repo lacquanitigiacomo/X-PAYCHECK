@@ -1,0 +1,29 @@
+{
+  "name": "x-paycheck",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "pretest": "npm run build --workspace @x-paycheck/shared --workspace @x-paycheck/audit-core",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "dev:web": "npm run dev --workspace @x-paycheck/web",
+    "dev:api": "npm run dev --workspace @x-paycheck/api",
+    "dev:mobile": "npm run start --workspace @x-paycheck/mobile"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react-hooks": "^5.2.0"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "X-PAY CHECK",
+    "slug": "x-pay-check",
+    "scheme": "xpaycheck",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "plugins": [
+      "expo-secure-store",
+      "@react-native-google-signin/google-signin",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Consenti a X-PAY CHECK di selezionare l'immagine del cedolino.",
+          "cameraPermission": "Consenti a X-PAY CHECK di fotografare il cedolino.",
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "android": {
+      "package": "it.xpaycheck.mobile",
+      "googleServicesFile": "./google-services.json",
+      "blockedPermissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "it.xpaycheck.mobile",
+      "googleServicesFile": "./GoogleService-Info.plist"
+    }
+  }
+}

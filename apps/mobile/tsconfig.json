@@ -1,0 +1,38 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@theme/*": [
+        "./src/theme/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@screens/*": [
+        "./src/screens/*"
+      ],
+      "@navigation/*": [
+        "./src/navigation/*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "android",
+    "ios"
+  ]
+}

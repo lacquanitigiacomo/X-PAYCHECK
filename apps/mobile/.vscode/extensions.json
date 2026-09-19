@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
+    "ms-vscode.vscode-typescript-next",
+    "expo.vscode-expo-tools",
+    "formulahendry.auto-rename-tag",
+    "bradlc.vscode-tailwindcss",
+    "pkief.material-icon-theme",
+    "eamodio.gitlens",
+    "usernamehw.errorlens",
+    "yoavbls.pretty-ts-errors",
+    "wix.glean",
+    "streetsidesoftware.code-spell-checker-italian",
+    "naumovs.color-highlight"
+  ],
+  "unwantedRecommendations": [
+    "hookyqr.beautify"
+  ]
+}

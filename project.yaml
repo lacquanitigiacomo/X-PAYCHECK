@@ -1,0 +1,38 @@
+project_id: "x_pay_check"
+project_name: "X-PAY CHECK"
+project_url: "./PROJECTS/X-PAYCHECK/"
+project_sources:
+  - "./README.md"
+  - "./readme.md"
+  - "./AGENTS.md"
+  - "./apps/web/"
+  - "./apps/mobile/"
+  - "./services/api/"
+project_goal: "Gestire X-PAY CHECK come progetto autonomo di audit cedolini e interfacce locali."
+success_criteria:
+  - "Il progetto e' separato dagli altri contesti del workspace"
+  - "Frontend, backend e mobile sono leggibili come parti dello stesso prodotto"
+  - "Il catalogo dati lo espone come entita' autonoma"
+project_root: "./PROJECTS/X-PAYCHECK"
+scope: "audit cedolini, dashboard e supporto locale"
+summary: "Progetto autonomo per analisi cedolini e flussi correlati."
+keywords:
+  - "X-PAY CHECK"
+  - "audit"
+  - "cedolini"
+  - "dashboard"
+activation_phrases:
+  - "apri X-PAY CHECK"
+  - "lavoriamo su X-PAY CHECK"
+  - "attiva X-PAY CHECK"
+linked_agents:
+  - "master_manager"
+  - "ricercatore"
+  - "senior_full_stack_developer"
+  - "senior_visual_designer"
+dataset_paths:
+  - "../../KNOWLEDGE/DATASETS/projects/x-pay-check.yaml"
+workflow_paths:
+  - "./package.json"
+output_paths:
+  - "../../OUTPUTS/"

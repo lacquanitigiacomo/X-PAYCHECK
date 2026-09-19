@@ -1,0 +1,68 @@
+{
+  "X-PAY Screen": {
+    "prefix": "xscreen",
+    "body": [
+      "import React from 'react';",
+      "import { View, StyleSheet } from 'react-native';",
+      "import { useTheme } from '../theme';",
+      "",
+      "export const ${1:ScreenName}Screen: React.FC = () => {",
+      "  const { colors } = useTheme();",
+      "",
+      "  return (",
+      "    <View style={[styles.container, { backgroundColor: colors.background }]}>",
+      "      ${2:{/* Content */}}",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "const styles = StyleSheet.create({",
+      "  container: {",
+      "    flex: 1,",
+      "    padding: 16,",
+      "  },",
+      "});"
+    ],
+    "description": "X-PAY Screen scaffold"
+  },
+  "X-PAY Component": {
+    "prefix": "xcomp",
+    "body": [
+      "import React from 'react';",
+      "import { View, Text, StyleSheet } from 'react-native';",
+      "import { useTheme } from '../../theme';",
+      "",
+      "interface ${1:ComponentName}Props {",
+      "  ${2:prop}: ${3:string};",
+      "}",
+      "",
+      "export const ${1:ComponentName}: React.FC<${1:ComponentName}Props> = ({ ${2:prop} }) => {",
+      "  const { colors, typography } = useTheme();",
+      "",
+      "  return (",
+      "    <View style={styles.container}>",
+      "      <Text style={[typography.body, { color: colors.text }]}>",
+      "        ${4:Content}",
+      "      </Text>",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "const styles = StyleSheet.create({",
+      "  container: {},",
+      "});"
+    ],
+    "description": "X-PAY Component scaffold"
+  },
+  "X-PAY Semaforo": {
+    "prefix": "xsemaforo",
+    "body": [
+      "<Semaforo",
+      "  status=\"${1|PASS,WARNING,CRITICO,INFO}\"",
+      "  label=\"${2:Label}\"",
+      "  value=\"${3:Value}\"",
+      "/>"
+    ],
+    "description": "X-PAY Semaforo indicator"
+  }
+}

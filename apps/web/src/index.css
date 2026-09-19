@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  * {
+    scrollbar-color: #24423d #071014;
+  }
+
+  body {
+    @apply bg-xpay-ink text-gray-100 antialiased;
+    background:
+      radial-gradient(circle at 12% 0%, rgba(104, 215, 190, 0.10), transparent 30rem),
+      linear-gradient(180deg, #05080b 0%, #071014 48%, #05080b 100%);
+    min-width: 320px;
+  }
+
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .xpay-card {
+    @apply rounded-lg border border-xpay-line/80 bg-xpay-panel/90 shadow-[0_18px_60px_rgba(0,0,0,0.34)];
+  }
+
+  .xpay-field {
+    @apply w-full rounded-lg border border-xpay-line bg-xpay-soft px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-xpay-mint focus:ring-2 focus:ring-xpay-mint/20;
+  }
+
+  .xpay-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-xpay-mint px-5 py-3 text-sm font-bold text-xpay-ink transition hover:bg-xpay-cyan disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .xpay-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-xpay-line bg-xpay-soft px-5 py-3 text-sm font-semibold text-gray-100 transition hover:border-xpay-mint/60 hover:text-white;
+  }
+
+  .phone-shell {
+    @apply rounded-[2rem] border border-gray-700/80 bg-black p-2 shadow-[0_24px_80px_rgba(0,0,0,0.55)];
+  }
+
+  .phone-screen {
+    @apply min-h-[560px] rounded-[1.5rem] border border-xpay-line/70 bg-[#090d12] p-5;
+  }
+
+  .mini-label {
+    @apply text-[0.68rem] font-semibold uppercase tracking-wide text-xpay-mint;
+  }
+}

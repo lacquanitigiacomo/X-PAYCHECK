@@ -1,0 +1,72 @@
+openapi: 3.0.3
+info:
+  title: X-PAY CHECK API
+  version: 10.0.0
+  description: Are You Broke? — Quantum Audit Nexus API
+servers:
+  - url: http://localhost:3001/api/v1
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: { type: string }
+                  version: { type: string }
+  /auth/register:
+    post:
+      summary: Register new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name: { type: string }
+                email: { type: string, format: email }
+                password: { type: string, minLength: 8 }
+      responses:
+        '201':
+          description: User created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token: { type: string }
+                  user: { type: object }
+  /auth/login:
+    post:
+      summary: Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email: { type: string }
+                password: { type: string }
+      responses:
+        '200':
+          description: Login successful
+  /dashboard:
+    get:
+      summary: Get dashboard data
+      security: [BearerAuth: []]
+      responses:
+        '200':
+          description: Dashboard stats
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

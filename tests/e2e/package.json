@@ -1,0 +1,13 @@
+{
+  "name": "x-paycheck-e2e-tests",
+  "version": "10.0.0",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.2"
+  }
+}
